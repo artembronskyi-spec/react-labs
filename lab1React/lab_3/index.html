@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Метадані -->
+  <title>Тарифи на хмарне сховище | Базовий, Професійний та Корпоративний плани</title>
+  <meta name="description" content="Оберіть ідеальний тарифний план для ваших завдань. Прозорі ціни на хмарне сховище від 10$ на місяць. Порівняйте можливості та почніть роботу вже сьогодні.">
+  <link rel="canonical" href="https://artembronskyi-spec.github.io/Labs-React/">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Глобальний хедер (тут може бути логотип та навігація) -->
+  <header class="site-header">
+    <nav>
+    </nav>
+  </header>
+
+  <!-- Основний контент сторінки -->
+  <main>
+    <section class="tariffs">
+      <div class="tariffs-container">
+        
+        <header class="tariffs-header">
+          <!-- H1 - Головна тема сторінки -->
+          <h1>Оберіть ваш тариф</h1>
+          <p>Зрозуміла оплата без прихованих платежів для команд будь-якого розміру</p>
+        </header>
+
+        <!-- H2 -  заголовок секції (візуально прихований, але є в DOM для ієрархії) -->
+        <h2 class="visually-hidden">Доступні тарифні плани</h2>
+
+        <div class="tariffs-list">
+          
+          <!-- Картка 1: Використовуємо article, H3 та посилання <a> -->
+          <article class="tariff-card">
+            <h3 class="plan-title">Базовий</h3>
+            <div class="plan-price">$10 <span>/ міс</span></div>
+            <ul class="plan-features">
+              <li>1 користувач</li>
+              <li>5 GB пам'яті</li>
+              <li>Базова підтримка</li>
+            </ul>
+            <a href="/checkout/basic" class="plan-btn">Обрати тариф</a>
+          </article>
+
+          <!-- Картка 2 ПРО план -->
+          <article class="tariff-card tariff-card--popular">
+            <span class="plan-badge">ПРО*Активний</span>
+            <h3 class="plan-title">Професійний</h3>
+            <div class="plan-price">$29 <span>/ міс</span></div>
+            <ul class="plan-features">
+              <li>5 користувачів</li>
+              <li>50 GB пам'яті</li>
+              <li>Пріоритетна підтримка</li>
+            </ul>
+            <a href="/checkout/pro" class="plan-btn plan-btn--primary">Розпочати безкоштовно</a>
+          </article>
+
+          <!-- Картка 3 -->
+          <article class="tariff-card">
+            <h3 class="plan-title">Корпоративний</h3>
+            <div class="plan-price">$99 <span>/ міс</span></div>
+            <ul class="plan-features">
+              <li>Безліміт користувачів</li>
+              <li>1 TB пам'яті</li>
+              <li>24/7 підтримка</li>
+            </ul>
+            <a href="/contact-sales" class="plan-btn">Зв'язатися з нами</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Всі права захищено.</p>
+  </footer>
+
+</body>
+</html>
