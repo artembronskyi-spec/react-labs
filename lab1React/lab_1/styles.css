@@ -1,0 +1,158 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-surface: #0f172a;
+  --color-background: #090d16;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #64748b;
+  --color-border: #1e293b;
+  --font-family-base: 'Inter', system-ui, sans-serif;
+  --border-radius: 12px;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  padding: 50px 20px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pricing-header h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.pricing-header p {
+  color: var(--color-text-muted);
+  font-size: 16px;
+}
+
+/* 5. Сітка карток */
+.cards-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 30px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-featured {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.card-type {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.price span {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-weight: normal;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.features li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: var(--color-text-main);
+}
+
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  .cards-wrapper {
+    flex-direction: column;
+  }
+
+  .card-featured {
+    margin-top: 15px;
+  }
+}
