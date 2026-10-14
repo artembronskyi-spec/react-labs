@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlowTask</title>
-  <meta name="robots" content="noindex">
   <link rel="icon" href="img/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/main.js"></script>
@@ -38,12 +37,12 @@
   <div class="site-header__inner">
     <img class="logo" src="img/logo.svg" alt="FlowTask" width="132" height="28">
 
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-      <div class="nav-item" data-target="features">Product</div>
-      <div class="nav-item" data-target="pricing">Pricing</div>
-      <div class="nav-item" data-target="faq">FAQ</div>
-      <div class="nav-item" data-target="trial">Trial</div>
-    </nav>
+    <nav class="nav" aria-label="Main navigation">
+   <button class="nav-item" data-target="features">Product</button>
+   <button class="nav-item" data-target="pricing">Pricing</button>
+   <button class="nav-item" data-target="faq">FAQ</button>
+   <button class="nav-item" data-target="trial">Trial</button>
+ </nav>
 
     <div class="site-header__actions">
       <a class="link-quiet" href="about.html">About</a>
@@ -61,19 +60,18 @@
         <h1>FlowTask</h1>
         <p class="hero__lead">Plan the week, run the sprint and ship on Friday — without three
           different tools arguing about who owns what.</p>
-        <div class="button button--primary button--lg" id="hero-cta">Get started</div>
-        <p class="hero__note muted">Free for 14 days. No credit card required.</p>
-      </div>
-      <img class="hero__image" src="img/hero.jpg">
+       <button class="button button--primary button--lg" id="hero-cta">Get started</button>
+     <p class="hero__note muted">Free for 14 days. No credit card required.</p>
+   </div>
+   <img class="hero__image" src="img/hero.jpg" alt="Ілюстрація команди, яка працює над проєктом">
     </div>
   </section>
 
   <section class="section section--alt" id="features">
     <div class="shell">
       <div class="section__head">
-        <h4>Why FlowTask?</h4>
-        <p class="muted">Three things teams ask us for, built in rather than bolted on.</p>
-      </div>
+     <h2>Why FlowTask?</h2>
+     <p class="muted">Three things teams ask us for, built in rather than bolted on.</p>
 
       <div class="grid-3">
         <div class="card">
@@ -197,7 +195,7 @@
         <div class="quote">
           <p>We moved eleven people over on a Tuesday and nobody asked for the old tool back.</p>
           <div class="quote__person">
-            <img class="quote__avatar" src="img/avatar-1.jpg" alt="" width="44" height="44">
+            <img class="quote__avatar" src="img/avatar-1.jpg" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="quote__name">Marta Kovalenko</div>
               <div class="quote__role">Head of Delivery, Northline</div>
@@ -209,7 +207,7 @@
           <p>The reports finally match what I see on the board, so our Friday review takes ten
             minutes instead of an hour.</p>
           <div class="quote__person">
-            <img class="quote__avatar" src="img/avatar-2.jpg" alt="" width="44" height="44">
+            <img class="quote__avatar" src="img/avatar-2.jpg" alt="" width="44" height="44" loading="lazy">
             <div>
               <div class="quote__name">Daniel Reyes</div>
               <div class="quote__role">Engineering Manager, Pilotgrid</div>
@@ -220,7 +218,7 @@
         <div class="quote">
           <p>Automations replaced the spreadsheet we had been quietly maintaining for two years.</p>
           <div class="quote__person">
-            <img class="quote__avatar" src="img/avatar-3.jpg" alt="" width="44" height="44">
+            <img class="quote__avatar" src="img/avatar-3.jpg" alt="" width="44" height="44" loading="lazy ">
             <div>
               <div class="quote__name">Ines Farkas</div>
               <div class="quote__role">Ops Lead, Corvus Studio</div>
@@ -282,11 +280,11 @@
           on the last day.</p>
 
         <form class="trial__form" id="trial-form">
-          <input class="trial__input" type="text" name="name" placeholder="Your name">
-          <input class="trial__input" type="email" name="email" placeholder="Work email">
-          <input class="trial__input" type="text" name="company" placeholder="Company">
-          <div class="button button--invert" role="button" tabindex="0" id="trial-submit">Start free trial</div>
-        </form>
+       <input class="trial__input" type="text" name="name" placeholder="Your name" aria-label="Your name">
+       <input class="trial__input" type="email" name="email" placeholder="Work email" aria-label="Work email">
+       <input class="trial__input" type="text" name="company" placeholder="Company" aria-label="Company">
+       <button class="button button--invert" type="submit" id="trial-submit">Start free trial</button>
+     </form>
       </div>
     </div>
   </section>
