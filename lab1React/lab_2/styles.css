@@ -1,42 +1,55 @@
 :root {
-  --bg-page: #0b0f19;
-  --bg-container: #111827;
-  --bg-card: #1f2937;
-  
   --color-primary: #2563eb;
   --color-primary-hover: #1d4ed8;
-  
-  --text-main: #f9fafb;
-  --text-muted: #9ca3af;
-  --border-color: #374151;
-  
-  --radius: 8px;
+  --color-surface: #ffffff;
+  --color-background: #f8fafc;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-accent: #f59e0b;
+
+  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 1.5rem;
+  --font-size-small: 0.875rem;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --border-radius: 12px;
 }
 
+/* 2. Box Model & CSS Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* 3. Inheritance  */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--bg-page);
-  color: var(--text-main);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
   line-height: 1.5;
 }
 
+/* 4. Секція та Контейнер */
 .tariffs {
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .tariffs-container {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: var(--bg-container);
-  padding: 40px;
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
 }
 
 .tariffs-header {
@@ -45,35 +58,39 @@ body {
 }
 
 .tariffs-header h2 {
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-sm);
 }
 
 .tariffs-header p {
-  color: var(--text-muted);
-  font-size: 16px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
 }
 
+/* 5. Сітка карток (Flexbox) */
 .tariffs-list {
   display: flex;
-  gap: 20px;
+  gap: var(--spacing-lg);
   align-items: stretch;
 }
 
+/* 6. Спільний клас для карток  */
 .tariff-card {
   flex: 1;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: 24px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Виділення популярної картки лише суцільним кольором рамки */
-.tariff-card--popular {
+/* Модифікатор для виділеної картки */
+.tariff-card--featured {
   border-color: var(--color-primary);
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
 }
 
 .plan-badge {
@@ -83,82 +100,88 @@ body {
   transform: translateX(-50%);
   background-color: var(--color-primary);
   color: #ffffff;
-  font-size: 11px;
+  font-size: var(--font-size-small);
   font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
 }
 
 .plan-title {
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-sm);
 }
 
 .plan-price {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-lg);
 }
 
 .plan-price span {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   font-weight: 400;
-  color: var(--text-muted);
+  color: var(--color-text-muted);
 }
 
 .plan-features {
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-lg);
   flex-grow: 1;
 }
 
 .plan-features li {
-  margin-bottom: 10px;
-  color: var(--text-muted);
-  font-size: 15px;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
 }
 
 .plan-features li::before {
   content: "✓ ";
   color: var(--color-primary);
   font-weight: bold;
+  margin-right: 6px;
 }
 
-/* Плоскі кнопки */
-.plan-btn {
+/* 7. Спільні класи для кнопок (Reusable Classes / DRY) */
+.btn {
   width: 100%;
-  padding: 10px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
+  padding: 12px var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
   background-color: transparent;
-  color: var(--text-main);
-  font-size: 15px;
+  color: var(--color-text-main);
+  font-family: inherit;
+  font-size: var(--font-size-base);
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.plan-btn:hover {
-  background-color: var(--border-color);
+.btn:hover {
+  background-color: var(--color-background);
+  border-color: var(--color-text-muted);
 }
 
-.plan-btn--primary {
+/* Модифікатор акцентної кнопки */
+.btn--primary {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
+  color: #ffffff;
 }
 
-.plan-btn--primary:hover {
+.btn--primary:hover {
   background-color: var(--color-primary-hover);
   border-color: var(--color-primary-hover);
 }
 
-/* Адаптивність */
+/* 8. Адаптивність (Responsive <= 768px) */
 @media (max-width: 768px) {
   .tariffs-list {
     flex-direction: column;
   }
 
   .tariffs-container {
-    padding: 24px 16px;
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 }
