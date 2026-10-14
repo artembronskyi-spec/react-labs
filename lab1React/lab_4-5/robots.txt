@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Sitemap: https://react-labs/lab1React/lab_4-5/sitemap.xml
