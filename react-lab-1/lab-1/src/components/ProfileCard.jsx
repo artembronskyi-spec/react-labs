@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
-export default function ProfileCard({ name, group, technologies }) {
+export default function ProfileCard({
+  name = 'Бронський Артем',
+  group = 'КН-31',
+  technologies = ['React 19', 'Vite', 'Tailwind CSS'],
+}) {
   const [likes, setLikes] = useState(0)
 
   return (
