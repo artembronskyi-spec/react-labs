@@ -19,17 +19,34 @@ https://denysmatsevych.github.io/web-development-2026/react/labs/lab-2/
 - `npm run build`: production-збірка в `dist/`
 
 ## Дерево рендерингу
-
-Заповніть за вкладкою **Components ⚛** у React DevTools (§4.6).
+![Дерево рендерингу](./component-tree.png)
 
 ```text
 App
+├── Header
+├── Card
+│   └── Avatar
+└── Card
+    ├── Profile
+    │   └── Avatar
+    ├── Profile
+    │   └── Avatar
+    ├── Profile
+    │   └── Avatar
+    └── Profile
+        └── Avatar
 ```
 
 ## Дерево залежностей модулів
 
-Заповніть за рядками `import` у файлах `src/` (§4.6).
-
 ```text
 main.jsx
+├── index.css
+└── App.jsx
+    ├── Header.jsx
+    ├── Avatar.jsx
+    ├── Profile.jsx
+    │   └── Avatar.jsx
+    ├── Card.jsx
+    └── data.js
 ```
