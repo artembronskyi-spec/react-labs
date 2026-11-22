@@ -19,6 +19,7 @@ https://denysmatsevych.github.io/web-development-2026/react/labs/lab-2/
 - `npm run build`: production-збірка в `dist/`
 
 ## Дерево рендерингу
+
 ![Дерево рендерингу](./component-tree.png)
 
 ```text
