@@ -1,5 +1,5 @@
 {
-  "name": "react-labs",
+  "name": "lab-6-alt",
   "private": true,
   "workspaces": [
     "lab-*"
