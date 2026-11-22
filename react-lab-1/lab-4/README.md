@@ -28,6 +28,11 @@ https://denysmatsevych.github.io/web-development-2026/react/labs/lab-4/
 функцію-обробник, або запис у сховище поза React. GitHub показує цей блок
 діаграмою; перевірити її до `git push` можна в https://mermaid.live/.
 
+## Колокація стану
+
+- **До:** `App`, `SearchBar`, `MenuTable`, `MenuCategory`, `MenuItemRow`, `CafeInfo`
+- **Після:** `SearchBar`, `MenuTable`, `MenuCategory`, `MenuItemRow`
+
 ```mermaid
 flowchart TD
   App -->|menu| FilterableMenuTable
